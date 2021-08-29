@@ -2,7 +2,7 @@
 
 Dependencias instaladas:
 - Axios
-- Bootstrap
+- Bootstrap 5
 
 ## Project setup
 ```
