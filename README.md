@@ -1,4 +1,8 @@
-# estudiantes-vue
+# Ejemplo Vue 3 con Plantilla Admin Integrada
+
+Dependencias instaladas:
+- Axios
+- Bootstrap
 
 ## Project setup
 ```
