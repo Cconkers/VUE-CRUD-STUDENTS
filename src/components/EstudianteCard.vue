@@ -116,7 +116,7 @@
       dayNames: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
       dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
     };
-    let fechaBuena = new XDate(this.estudiante.created_at).toUTCString("ddd, dd MMM yyyy - HH:mm", "es");
+    let fechaBuena = new XDate(this.estudiante.created_at).toString("ddd, dd MMM yyyy - HH:mm", "es");
     this.estudiante.created_at = fechaBuena;
         },
 
