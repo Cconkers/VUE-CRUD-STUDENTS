@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const apiCliente = axios.create({
     baseURL: 'https://estudiantes.test/api',
-    withCredentials: false,
+    withCredentials: true,
     headers: {
         Accept: 'application/json',
         'Content-type': 'application/json',

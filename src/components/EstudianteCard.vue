@@ -13,7 +13,7 @@
     <div class="app-card-body p-3 has-card-actions">
       <h4 class="app-doc-title truncate mb-0">
         <router-link :to="{ name: 'EstudianteDetails', params: { id: estudiante.id } }">
-          {{ estudiante.nombre }}
+          {{ estudiante.name }}
         </router-link>
       </h4>
       <div class="app-doc-meta">

@@ -45,37 +45,42 @@ window.onload = () => {
 			sidePanel.classList.add('sidepanel-hidden');
 		}
 	};
+	if(sidePanelToggler){
+		
+		sidePanelToggler.addEventListener('click', () => {
+			if (sidePanel.classList.contains('sidepanel-visible')) {
+				console.log('visible');
+				sidePanel.classList.remove('sidepanel-visible');
+				sidePanel.classList.add('sidepanel-hidden');
+	
+			} else {
+				console.log('hidden');
+				sidePanel.classList.remove('sidepanel-hidden');
+				sidePanel.classList.add('sidepanel-visible');
+			}
+		});
+	}
 
-	sidePanelToggler.addEventListener('click', () => {
-		if (sidePanel.classList.contains('sidepanel-visible')) {
-			console.log('visible');
-			sidePanel.classList.remove('sidepanel-visible');
-			sidePanel.classList.add('sidepanel-hidden');
 
-		} else {
-			console.log('hidden');
-			sidePanel.classList.remove('sidepanel-hidden');
-			sidePanel.classList.add('sidepanel-visible');
-		}
-	});
-
-
-
+	if(sidePanelClose){
 	sidePanelClose.addEventListener('click', (e) => {
 		e.preventDefault();
 		sidePanelToggler.click();
 	});
+	}
 
+	if(sidePanelDrop){
 	sidePanelDrop.addEventListener('click', (e) => {
 		sidePanelToggler.click();
 	});
-
+	}
 
 
 	/* ====== Mobile search ======= */
 	const searchMobileTrigger = document.querySelector('.search-mobile-trigger');
 	const searchBox = document.querySelector('.app-search-box');
 
+	if(searchMobileTrigger){
 	searchMobileTrigger.addEventListener('click', () => {
 
 		searchBox.classList.toggle('is-visible');
@@ -90,4 +95,5 @@ window.onload = () => {
 			searchMobileTriggerIcon.classList.add('fa-search');
 		}
 	});
+}
 }

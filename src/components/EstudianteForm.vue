@@ -5,7 +5,7 @@
 
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" v-model="estudiante.nombre" required="" />
+          <input type="text" class="form-control" id="name" v-model="estudiante.name" required="" />
         </div>
 
         <div class="mb-3">
@@ -39,7 +39,9 @@
       estudiante: {
         type: Object,
         default() {
-          return { nombre: null, email: null }
+          return { 
+          name: null,
+          email: null }
         }
       }
     },
@@ -58,6 +60,7 @@
         document.getElementById("fileUpload").click();
       },
       onSubmit() {
+        console.log(this.estudiante);
         if (this.estudiante.id) {
           // Actualizar
           EstudianteService.updateEstudiante(this.estudiante.id, this.estudiante)
